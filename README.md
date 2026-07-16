@@ -1,1 +1,3 @@
-# alu-higher_level_programming
+Higher Level Programming - Python
+
+This project covers Python basics: variables, strings, print formatting, and shell scripting fundamentals.
