@@ -1,5 +1,3 @@
-#!
-cat > 8-multiple_returns.py << 'EOF'
 #!/usr/bin/python3
 def multiple_returns(sentence):
     if len(sentence) == 0:
