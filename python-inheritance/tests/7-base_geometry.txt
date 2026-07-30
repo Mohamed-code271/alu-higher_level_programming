@@ -36,7 +36,31 @@ Negative value::
     ValueError: distance must be greater than 0
 
 Boolean is not accepted as an integer::
+Tuple is not accepted as an integer::
 
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+List is not accepted as an integer::
+
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+Set is not accepted as an integer::
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+None is not accepted as an integer::
+
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
     >>> bg.integer_validator("flag", True)
     Traceback (most recent call last):
     TypeError: flag must be an integer
+
+
