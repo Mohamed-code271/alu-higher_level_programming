@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""Displays the X-Request-Id header value using requests"""
+import requests
+import sys
+
+response = requests.get(sys.argv[1])
+print(response.headers.get('X-Request-Id'))
