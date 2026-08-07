@@ -1,5 +1,3 @@
 #!/bin/bash
-curl -s -o /tmp/body_output -w "%{http_code}" "$1" > /tmp/status_code
-if [ "$(cat /tmp/status_code)" -eq 200 ]; then
-    cat /tmp/body_output
-fi
+# Sends a GET request and displays the body only if status code is 200
+curl -s -o /dev/null -w "%{http_code}" "$1" | grep -q 200 && curl -s "$1"
